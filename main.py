@@ -46,10 +46,7 @@ def buttonClick(value):
 # define the window
 root = Tk()
 root.title('Simple Calculator')
-
-# define window icon
-icon = PhotoImage(file='icon.png')
-root.iconphoto(True, icon)
+root.iconbitmap(default='icon.ico')  # define window icon
 
 calcInput = Entry(root, width=40, borderwidth=5)
 calcInput.grid(row=0, column=0, columnspan=5, padx=10, pady=5)
@@ -67,9 +64,9 @@ button0 = Button(root, text=' 0 ', padx=86, pady=20, command=lambda: buttonClick
 
 decimalButton = Button(root, text=' .  ', padx=39, pady=20, command=lambda: buttonClick('.'))
 clearButton = Button(root, text='Clear ', padx=77, pady=20, command=lambda: buttonClick('clear'))
-plusButton = Button(root, text=' + ', padx=36, pady=20, command=lambda: buttonClick('+'))
+plusButton = Button(root, text=' +  ', padx=36, pady=20, command=lambda: buttonClick('+'))
 equalButton = Button(root, text='   =   ', padx=81, pady=20, command=lambda: buttonClick('='))
-minusButton = Button(root, text='- ', padx=40, pady=20, command=lambda: buttonClick('-'))
+minusButton = Button(root, text=' - ', padx=39, pady=20, command=lambda: buttonClick('-'))
 multiButton = Button(root, text=' * ', padx=39, pady=20, command=lambda: buttonClick('*'))
 divButton = Button(root, text=' / ', padx=39, pady=20, command=lambda: buttonClick('/'))
 
